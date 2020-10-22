@@ -1,0 +1,47 @@
+header{
+    width: 100vw;
+    height: 100px;
+    background-color: aquamarine;
+    margin-top: -8px;
+    margin-left: -8px;
+    
+}
+
+.bodyText{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(83, 83, 83);
+    width: 100vw;
+    margin-left: -8px;
+}
+
+.sidePanel{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    background-color: rgb(168, 168, 168);
+
+}
+
+.viewPanel{
+    display: flex;
+    width: 60%;
+
+}
+
+p{
+    padding: 10px;
+}
+
+#titleInput{
+    height: 30px;
+}
+
+#noteInput{
+    height: 30px;
+}
+
+
+.deleteNote{
+    float: right;
+}
