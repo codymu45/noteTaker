@@ -10,7 +10,7 @@ var cors = require('cors');
 // =============================================================
 var app = express(); 
 app.use(cors());
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 //Creating Notes
 var notes;
