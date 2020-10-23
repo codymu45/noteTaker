@@ -25,15 +25,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Root URL
-app.get('/', (req, res) =>{
+app.use( express.static("/"); )
+
+app.get('/index.html', (req, res) =>{
     res.sendFile('index.html')
  });
 
-app.get('/', (req, res) =>{
+app.get('/script.js', (req, res) =>{
     res.sendFile('script.js')
  });
 
-app.get('/s', (req, res) =>{
+app.get('/style.css', (req, res) =>{
     res.sendFile('style.css')
  });
 
