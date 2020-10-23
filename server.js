@@ -25,8 +25,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Root URL
-app.use( express.static("/"));
+app.use( express.static(__dirname));
 
+app.get('/', (req, res) =>{
+    res.sendFile(path.join(__dirname + "/index.html"))
+ });
 
 app.get('/index.html', (req, res) =>{
     res.sendFile('./index.html')
