@@ -11,11 +11,12 @@ function loadNotes(){
     }).then(function(response){
         $('.sidePanel').empty();
         $('.sidePanel').append(`
-            <button class="createNew" onclick="createNote()">Create New</button>`)
+            <button class="createNew" onclick="createNote()">Create New +</button>`)
         for(var i = 0; i < response.length; i++){
             $('.sidePanel').append(`
-            <div class="sideNote" onclick="loadNote(${response[i].id})">${response[i].title}
-                <p class="deleteNote" onclick="deleteNote(${response[i].id})">X</p>
+            <div class="sideBox">
+            <p class="sideNote" onclick="loadNote(${response[i].id})">${response[i].title}</p>
+            <p class="deleteNote" onclick="deleteNote(${response[i].id})">X</p>
             </div>`);
         }
     });
@@ -55,7 +56,7 @@ function createNote() {
     <input id="titleInput" placeholder="Enter Title Here">
     <br>
     <h3>Note</h3>
-    <input id="noteInput" placeholder="Enter Note Here">
+    <input id="noteInput" placeholder="Enter Note Here"> <br>
     <button type="submit" id="saveBtn" onclick="saveNote()">Save</button>
     </div>`)
 }

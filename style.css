@@ -1,16 +1,20 @@
 header{
     width: 100vw;
     height: 100px;
-    background-color: aquamarine;
+    background-color: rgb(168, 0, 0);
     margin-top: -8px;
     margin-left: -8px;
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Sanchez', serif;
+    color: white;
     
 }
 
 .bodyText{
     display: flex;
     flex-direction: row;
-    background-color: rgb(83, 83, 83);
+    background-color: rgb(226, 226, 226);
     width: 100vw;
     margin-left: -8px;
 }
@@ -20,13 +24,20 @@ header{
     flex-direction: column;
     width: 25%;
     background-color: rgb(168, 168, 168);
+    border: black, solid, 5px;
+    font-size: 20px;
+    font-family: 'Sanchez', serif;
+    height: 100vh;
 
 }
 
+
+
 .viewPanel{
     display: flex;
+    flex-direction: column;
     width: 60%;
-
+    height: 100vh;
 }
 
 p{
@@ -44,4 +55,67 @@ p{
 
 .deleteNote{
     float: right;
+    cursor: pointer;
+    font-family: 'Audiowide', cursive;
+    font-size: larger;
+}
+
+.createNew{
+    font-family: 'Sanchez', serif;
+    margin: 5px;
+    height: 50px;
+    font-size: 30px;
+}
+
+.sideNote{
+    text-align: center;
+    cursor: pointer;
+    width: 80%;
+    font-size: larger;
+}
+
+.title{
+    font-size: 50px;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Sanchez', serif;
+}
+
+.body{
+    font-size: 25px;
+    padding: 10px;
+    font-family: 'Sanchez', serif;
+}
+
+#titleInput{
+    margin: 15px;
+    padding: 10px;
+}
+
+#noteInput{
+    margin: 15px;
+    padding: 10px;
+    font-family: 'Sanchez', serif;
+}
+
+h3{
+    margin-left: 10px;
+    font-size: 30px;
+    font-family: 'Sanchez', serif;
+}
+
+#saveBtn{
+    margin: 15px;
+    size: 30px;
+    font-size: 20px;
+    font-family: 'Sanchez', serif;
+}
+
+.sideBox{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
 }
