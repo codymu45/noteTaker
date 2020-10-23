@@ -3,7 +3,7 @@ $( document ).ready(function() {
 });
 
 function loadNotes(){
-    var queryURL = `http://localhost:3000/api/notes`; 
+    var queryURL = `https://mullennotetaker.herokuapp.com/api/notes`; 
     $.ajax({
         url: queryURL,
         method: 'GET',
@@ -23,7 +23,7 @@ function loadNotes(){
 }
 
 function loadNote(id) {
-    var queryURL = `http://localhost:3000/api/note?id=${id}`; 
+    var queryURL = `https://mullennotetaker.herokuapp.com/api/note?id=${id}`; 
     $.ajax({
         url: queryURL,
         method: 'GET'
@@ -34,7 +34,7 @@ function loadNote(id) {
 }
 
 function deleteNote(id) {
-    var queryURL = `http://localhost:3000/api/note?id=${id}`; 
+    var queryURL = `https://mullennotetaker.herokuapp.com/api/note?id=${id}`; 
     $.ajax({
         url: queryURL,
         method: 'DELETE'
@@ -68,7 +68,7 @@ function saveNote() {
         title: titleInput,
         note: noteInput
     }
-    var queryURL = `http://localhost:3000/api/notes/new`; 
+    var queryURL = `https://mullennotetaker.herokuapp.com/api/notes/new`; 
     $.ajax({
         url: queryURL,
         method: 'POST',
