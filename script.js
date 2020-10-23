@@ -1,3 +1,43 @@
+// Dependencies
+// =============================================================
+var express = require('express');
+var path = require('path');
+var fs = require('fs');
+const Note = require('./models/Note');
+var cors = require('cors');
+
+// Sets up the Express App
+// =============================================================
+var app = express(); 
+app.use(cors());
+var PORT = process.env.PORT || 3000;
+
+//Creating Notes
+var notes;
+try {
+    notes = JSON.parse(fs.readFileSync('db.json'));
+} catch (err) {
+    notes = [];
+}
+
+// Sets up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Root URL
+app.get('/',(req, res) => {
+    res.send('Welcome to our note taker');
+});
+
+// Get all notes
+app.get('/api/notes', (req, res) => {
+    if (notes.length === 0){
+        return res.json({message: 'There are no notes!'})
+    } else {
+        return res.json(notes);
+    }
+});
+
 $( document ).ready(function() {
     loadNotes();
 });
