@@ -27,16 +27,17 @@ app.use(express.json());
 // Root URL
 app.use( express.static("/"));
 
+
 app.get('/index.html', (req, res) =>{
-    res.sendFile('index.html')
+    res.sendFile('./index.html')
  });
 
 app.get('/script.js', (req, res) =>{
-    res.sendFile('script.js')
+    res.sendFile('./script.js')
  });
 
 app.get('/style.css', (req, res) =>{
-    res.sendFile('style.css')
+    res.sendFile('./style.css')
  });
 
 // Get all notes
