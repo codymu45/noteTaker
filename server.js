@@ -25,9 +25,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Root URL
-app.get('/',(req, res) => {
-    res.send('Welcome to our note taker');
-});
+app.get('/index.html', (req, res) =>{
+    res.sendFile('/index.html')
+ });
+
+app.get('/script.js', (req, res) =>{
+    res.sendFile('/script.js')
+ });
+
+app.get('/style.css', (req, res) =>{
+    res.sendFile('/style.css')
+ });
 
 // Get all notes
 app.get('/api/notes', (req, res) => {
